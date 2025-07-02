@@ -1,0 +1,159 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.todo-container {
+  max-width: 420px;
+  margin: 48px auto;
+  background: #fff;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #0002;
+  text-align: center;
+  border: 2px solid #ffb385;
+  position: relative;
+  overflow: hidden;
+}
+
+.todo-container:before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 120px;
+  height: 120px;
+  background: #ffb38544;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.todo-container:after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 120px;
+  height: 120px;
+  background: #f6d36544;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.todo-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-container input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-container button {
+  background: #ff7e5f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.input-container button:hover {
+  background: #feb47b;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0.2rem;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.task-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.task-actions button {
+  margin-left: 0.5rem;
+  background: #eee;
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.task-actions button:hover {
+  background: #ff7e5f;
+  color: #fff;
+}
+
+.edit-btn {
+  background: #ffd700;
+  color: #333;
+}
+
+.edit-btn:hover {
+  background: #ffb300;
+  color: #fff;
+}
+
+#taskSummary {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #ff7e5f;
+}

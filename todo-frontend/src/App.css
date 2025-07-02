@@ -1,0 +1,305 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #f8fafc;
+  min-height: 100vh;
+  margin: 0;
+  color: #333333;
+}
+
+.todo-container, .app-box, .wrapper {
+  width: 100vw;
+  max-width: 400px;
+  min-width: 260px;
+  margin: 32px auto;
+  background: #fdf6fa;
+  color: #333;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px 0 rgba(180, 143, 255, 0.07);
+  border: 2.5px solid #e1bee7;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.todo-container h1, .todo-container h2, .todo-title, .task-title {
+  color: #4a148c !important;
+  font-weight: bold;
+  font-size: 26px;
+  text-shadow: none;
+  opacity: 1;
+  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  width: 100%;
+}
+#taskSummary {
+  color: #333333 !important;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 1.2rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #f3e8ff;
+  width: 100%;
+  text-align: center;
+}
+.completed-label, .uncompleted-label {
+  color: #333333 !important;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0 8px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+  width: 100%;
+  background: #f7faff;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 0.7rem 1rem;
+}
+.input-container > * {
+  width: auto;
+  max-width: none;
+  text-align: left;
+}
+.input-container input[type="text"],
+.input-container input[type="date"],
+.input-container select {
+  flex: 2 1 0;
+  min-width: 0;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #c7e0f7;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f0f7fa;
+  color: #4a148c;
+  box-shadow: none;
+  transition: border 0.2s;
+}
+.input-container input[type="text"]:focus,
+.input-container select:focus {
+  border: 1px solid #b39ddb;
+}
+.input-container button {
+  flex: 1 1 0;
+  background: #e1bee7;
+  color: #4a148c;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.2s, transform 0.1s;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+}
+.input-container button:hover {
+  background: #f8bbd0;
+  color: #fff;
+  transform: translateY(-1px) scale(1.02);
+}
+#taskList {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  min-height: 200px;
+  max-height: 420px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  background: transparent;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.task-item {
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(74, 20, 140, 0.06);
+  border: 1px solid #f3e8ff;
+  transition: background 0.2s, box-shadow 0.2s;
+  position: relative;
+  color: #333333;
+  box-sizing: border-box;
+}
+.task-main {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  min-width: 120px;
+  justify-content: flex-end;
+}
+.task-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 70px;
+  max-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 8px #b3e5fc33;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+.task-actions .edit-btn {
+  background: #fff9c4;
+  color: #f57f17;
+}
+.task-actions .edit-btn:hover {
+  background: #fff59d;
+  color: #f57f17;
+}
+.task-actions .delete-btn {
+  background: #ffcdd2;
+  color: #c62828;
+}
+.task-actions .delete-btn:hover {
+  background: #ef9a9a;
+  color: #c62828;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #fff;
+  background: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.7rem;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+input[type="checkbox"]:checked {
+  accent-color: #c8e6c9;
+  border-color: #388e3c;
+}
+input[type="checkbox"]:focus {
+  border: 1.5px solid #4a148c;
+}
+
+.task-title-scroll {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+.task-title-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .todo-container, .app-box, .wrapper {
+    max-width: 100vw;
+    min-width: 0;
+    padding: 1.2rem 0.5rem;
+  }
+  #taskList {
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  html, body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .todo-container, .app-box, .wrapper {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0.7rem 0.3rem;
+    margin: 12px auto;
+    border-radius: 7px;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .input-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.5rem 0.3rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .input-container > * {
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  #taskList {
+    max-height: 320px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 0.7rem;
+  }
+  .task-item {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 0.5rem !important;
+    min-height: 40px;
+    padding: 0.7rem 0.5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    word-break: break-word;
+    position: relative;
+  }
+  .task-main {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .task-actions {
+    min-width: 0 !important;
+    width: 100%;
+    justify-content: flex-start !important;
+    gap: 0.5rem !important;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin-top: 0.3rem;
+    padding-right: 0.5rem;
+  }
+  .task-actions button {
+    width: 48%;
+    min-width: 90px;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+    overflow-x: hidden;
+    margin-right: 0.5rem;
+  }
+  .todo-container h1, .todo-container h2 {
+    font-size: 20px;
+    margin-bottom: 0.7rem;
+  }
+}

@@ -1,0 +1,40 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+.todo-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+}
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+.task-actions button {
+  margin-left: 0.5rem;
+}
+.edit-btn {
+  background: #ffd700;
+}
