@@ -1,59 +1,23 @@
+# 📜 ToDo List Application
 
-# 📝 ToDo List Application
+## 1. Project Title & Description
 
-A full-stack To-Do List application built with **React** (frontend) and **Spring Boot** (backend), connected to a **MongoDB** database for persistent task storage. It allows users to create, manage, and track their daily tasks efficiently.
-
----
-
-## 🚀 Features
-
-- Add new tasks with title, description (optional), due date, and priority  
-- View all tasks with filter options: Completed / Incomplete / Due Date / Priority  
-- Edit task details  
-- Delete tasks  
-- Mark tasks as complete/incomplete  
-- Prioritize tasks (Low, Medium, High)  
-- Responsive UI (Mobile + Desktop)  
-- Persistent data storage with MongoDB  
+**ToDo List Application** is a simple and intuitive full-stack web app that helps users manage their daily tasks. Built with **React** for the frontend and **Spring Boot** for the backend, it supports task creation, updates, deletion, priority settings, and due date tracking — all stored persistently in a **MongoDB** database.
 
 ---
 
-## 📁 Project Structure
+## 2. Installation Instructions
 
-````
-
-todo-application/
-├── backend/              # Spring Boot backend
-│   └── src/
-│       ├── controller/
-│       ├── model/
-│       ├── repository/
-│       └── TodoApplication.java
-│   └── resources/
-│       └── application.properties
-├── frontend/             # React frontend
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── App.js
-│   │   └── index.js
-
-````
-
----
-
-## ⚙️ Installation
-
-### 🔸 Backend (Spring Boot + MongoDB)
+### Backend (Spring Boot + MongoDB)
 
 1. Clone the backend repository:
-   ```bash
-   git clone https://github.com/your-username/todo-backend.git
-   cd todo-backend
-````
 
-2. Make sure MongoDB is running locally on default port `27017`.
+   ```bash
+   git clone https://github.com/gh-aguru-sandeep/todo-backend.git
+   cd todo-backend
+   ```
+
+2. Ensure **MongoDB** is installed and running on `localhost:27017`.
 
 3. Run the backend:
 
@@ -61,93 +25,136 @@ todo-application/
    ./mvnw spring-boot:run
    ```
 
-   Backend will be available at: `http://localhost:8080`
+   The backend will start at: `http://localhost:8080`
 
 ---
 
-### 🔹 Frontend (React)
+### Frontend (React)
 
 1. Clone the frontend repository:
 
    ```bash
-   git clone https://github.com/your-username/todo-frontend.git
+   git clone https://github.com/gh-aguru-sandeep/todo-frontend.git
    cd todo-frontend
    ```
 
-2. Install dependencies and start the React app:
+2. Install dependencies:
 
    ```bash
    npm install
+   ```
+
+3. Start the React app:
+
+   ```bash
    npm start
    ```
 
-   Frontend will be available at: `http://localhost:3000`
+   The frontend will start at: `http://localhost:3000`
 
 ---
 
-## 📌 Usage
+## 3. How to Run the Project
 
-1. Enter a task title, set the due date and priority, then click **Add**
-2. Use checkboxes to mark tasks as **complete**
-3. Click **Edit** or **Delete** to update/remove a task
-4. Tasks are saved and fetched from MongoDB automatically
+* Run the Spring Boot server on port `8080`.
+* Run the React app on port `3000`.
+* Open a browser and go to: `http://localhost:3000`
+* Interact with the task list: add, update, delete, and filter tasks.
 
 ---
 
-## 🔐 Technologies Used
+## 4. Features
 
-### Frontend
+* ✅ Add new tasks with title and priority
+* ✅ Mark tasks as completed/incomplete
+* ✅ Edit task details
+* ✅ Delete tasks
+* ✅ View and filter tasks by priority
+* ✅ Prioritize tasks as Low (1), Medium (2), or High (3)
+* ✅ Responsive design for mobile and desktop
+* ✅ Persistent data storage using MongoDB
+
+---
+
+## 5. Usage
+
+Once the app is running:
+
+* Enter task details and click **Add**
+* Click the checkbox ✅ to mark a task as complete
+* Click to edit or 🗑️ to delete a task
+* Use filters to view tasks based on completion, date, or priority
+
+---
+
+## 6. Technologies Used
+
+### Frontend:
 
 * React
-* Tailwind CSS / Bootstrap
+* Bootstrap
 
-### Backend
+### Backend:
 
 * Java
 * Spring Boot
 * Spring Data JPA
 
-### Database
+### Database:
 
 * MongoDB
 
----
+### Others:
 
-## 🤖 GitHub Copilot Usage
-
-* Helped generate repetitive boilerplate code
-* Suggested REST API routes and validation logic
-* Assisted in React form logic and component setup
-* Enhanced productivity and reduced development time
+* Git & GitHub
 
 ---
 
-## 🙌 Contributing
+## 7. Project Structure
 
-Feel free to fork the repo and submit a Pull Request!
-For major updates, open an issue first to discuss proposed changes.
-
----
-
-## 📄 License
-
-[MIT License](https://choosealicense.com/licenses/mit/)
-
----
-
-## 📬 Contact
-
-**Developer:** Sandeep Aguru
-**GitHub:** [@sandeepaguru20](https://github.com/sandeepaguru20)
-
+```
+todo-application/
+├── backend/                # Spring Boot backend
+│   ├── controller/
+│   ├── model/
+│   ├── repository/
+│   ├── TodoApplication.java
+│   └── resources/
+│       └── application.properties
+├── frontend/               # React frontend
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── App.js
+│       └── index.js
 ```
 
 ---
 
-Let me know if you also want:
-- API docs section
-- Screenshots
-- Live demo instructions (Render/Netlify)
+## 8. How GitHub Copilot Was Used
 
-✅ Paste this into your `README.md` and it will render perfectly on GitHub!
-```
+GitHub Copilot assisted in:
+
+* Auto-generating boilerplate code for controllers, models, and services
+* Suggesting React component structures and form handling
+* Speeding up development with intelligent code completions
+* Improving naming conventions and logic structure
+* Reducing repetitive tasks and increasing productivity
+
+---
+
+## 9. Author
+
+* 👨‍💻 Name: **Sandeep**
+* 🔗 GitHub: [gh-aguru-sandeep](https://github.com/gh-aguru-sandeep)
+
+---
+
+## 📝 License
+
+This project is open-source and intended for academic and learning purposes.
+
+---
+
+> 🔧 Customize the repository URLs and include images/screenshots as needed.
