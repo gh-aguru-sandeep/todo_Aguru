@@ -83,7 +83,7 @@ Once the app is running:
 * Enter task details and click **Add**
 * Click the checkbox ✅ to mark a task as complete
 * Click to edit or 🗑️ to delete a task
-* Use filters to view tasks based on completion, date, or priority
+* Use filters to view tasks based on completion or priority
 
 ---
 
@@ -157,4 +157,4 @@ This project is open-source and intended for academic and learning purposes.
 
 ---
 
-> 🔧 Customize the repository URLs and include images/screenshots as needed.
+
